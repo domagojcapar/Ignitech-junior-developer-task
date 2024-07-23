@@ -9,12 +9,12 @@
 
 
 <div class="actions">
-  <button (click)="loadStudentsForTeacher()">Load Students For Teacher</button>
-  <button (click)="loadSubjectsForTeacher()">Load Subjects For Teacher</button>
-  <button (click)="loadSubjectsForStudent()">Load Subjects For Student</button>
-  <button (click)="loadTeacherForStudentSubject()">Load Teacher For Student Subject</button>
-  <button (click)="loadGradesForStudentSubject()">Load Grades For Student Subject</button>
-  <button (click)="loadAverageGradeForStudentSubject()">Load Average Grade For Student Subject</button>
+  <button (click)="loadStudentsForTeacher()">Load students for teacher</button>
+  <button (click)="loadSubjectsForTeacher()">Load subjects for teacher</button>
+  <button (click)="loadSubjectsForStudent()">Load subjects for student</button>
+  <button (click)="loadTeacherForStudentSubject()">Load teacher for student and subject</button>
+  <button (click)="loadGradesForStudentSubject()">Load grades for student and subject</button>
+  <button (click)="loadAverageGradeForStudentSubject()">Load average grade for student and subject</button>
 </div>
 
 
@@ -34,7 +34,7 @@
   </ul>
 </div>
 
-<div *ngIf="teacher" class="display-section">
+<div *ngIf="teacher !== undefined" class="display-section">
   <h2>Teacher</h2>
   <ul>
   <li>{{ teacher }}</li>

@@ -26,7 +26,7 @@ export class AppComponent {
       alert('Please enter a teacher code.');
       return;
     }
-    this.del()
+    this.clear()
     if (this.teacherCode) {
       this.schoolService.getStudentsForTeacher(this.teacherCode).pipe(
         catchError(error => {
@@ -56,7 +56,7 @@ export class AppComponent {
       alert('Please enter a teacher code.');
       return;
     }
-    this.del()
+    this.clear()
     if (this.teacherCode) {
       this.schoolService.getSubjectsForTeacher(this.teacherCode).pipe(
         catchError(error => {
@@ -86,7 +86,7 @@ export class AppComponent {
       alert('Please enter a student code.');
       return;
     }
-    this.del()
+    this.clear()
     if (this.studentCode) {
       this.schoolService.getSubjectsForStudent(this.studentCode).pipe(
         catchError(error => {
@@ -116,7 +116,7 @@ export class AppComponent {
       alert('Please enter both student code and subject name.');
       return;
     }
-    this.del()
+    this.clear()
     if (this.studentCode && this.subjectName) {
       this.schoolService.getTeacherForStudentSubject(this.studentCode, this.subjectName).pipe(
         catchError(error => {
@@ -146,7 +146,7 @@ export class AppComponent {
       alert('Please enter both student code and subject name.');
       return;
     }
-    this.del();
+    this.clear();
     if (this.studentCode && this.subjectName) {
       this.schoolService.getGradesForStudentSubject(this.studentCode, this.subjectName).pipe(
         catchError(error => {
@@ -176,7 +176,7 @@ export class AppComponent {
       alert('Please enter both student code and subject name.');
       return;
     }
-    this.del()
+    this.clear()
     if (this.studentCode && this.subjectName) {
       this.schoolService.getAverageGradeForStudentSubject(this.studentCode, this.subjectName).pipe(
         catchError(error => {
@@ -201,7 +201,7 @@ export class AppComponent {
     }
   }
 
-  del() {
+  clear() {
     this.subjects = null;
     this.students = null;
     this.teacher = undefined;
