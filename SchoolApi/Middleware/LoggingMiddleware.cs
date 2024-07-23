@@ -14,13 +14,10 @@ namespace SchoolApi.Middleware
 
         public async Task InvokeAsync(HttpContext context)
         {
-            // Log request logic here
             System.Console.WriteLine($"Request: {context.Request.Method} {context.Request.Path}");
 
-            // Call the next delegate/middleware in the pipeline
             await _next(context);
 
-            // Log response logic here
             System.Console.WriteLine($"Response: {context.Response.StatusCode}");
         }
     }

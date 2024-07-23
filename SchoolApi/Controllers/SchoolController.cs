@@ -176,12 +176,5 @@ namespace SchoolApi.Controllers
 
             return Ok(average);
         }
-
-
-
-
-
-
-
     }
 }

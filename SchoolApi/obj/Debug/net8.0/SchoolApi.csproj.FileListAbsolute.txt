@@ -127,3 +127,4 @@ C:\Users\Dell\OneDrive\Desktop\Ignitech junior developer task\SchoolApi\obj\Debu
 C:\Users\Dell\OneDrive\Desktop\Ignitech junior developer task\SchoolApi\obj\Debug\net8.0\SchoolApi.genruntimeconfig.cache
 C:\Users\Dell\OneDrive\Desktop\Ignitech junior developer task\SchoolApi\obj\Debug\net8.0\ref\SchoolApi.dll
 C:\Users\Dell\OneDrive\Desktop\Ignitech junior developer task\SchoolApi\bin\Debug\net8.0\Microsoft.AspNetCore.SpaServices.Extensions.dll
+C:\Users\Dell\OneDrive\Desktop\Ignitech junior developer task\SchoolApi\obj\Debug\net8.0\SchoolApi.sourcelink.json

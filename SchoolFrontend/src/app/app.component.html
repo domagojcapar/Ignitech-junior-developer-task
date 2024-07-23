@@ -1,0 +1,58 @@
+
+<h1 class="title">Admin Dashboard</h1>
+
+<div class="input-section">
+  <input type="text" [(ngModel)]="teacherCode" placeholder="Enter teacher code" class="input-field">
+  <input type="text" [(ngModel)]="studentCode" placeholder="Enter student code" class="input-field">
+  <input type="text" [(ngModel)]="subjectName" placeholder="Enter subject name" class="input-field">
+</div>
+
+
+<div class="actions">
+  <button (click)="loadStudentsForTeacher()">Load Students For Teacher</button>
+  <button (click)="loadSubjectsForTeacher()">Load Subjects For Teacher</button>
+  <button (click)="loadSubjectsForStudent()">Load Subjects For Student</button>
+  <button (click)="loadTeacherForStudentSubject()">Load Teacher For Student Subject</button>
+  <button (click)="loadGradesForStudentSubject()">Load Grades For Student Subject</button>
+  <button (click)="loadAverageGradeForStudentSubject()">Load Average Grade For Student Subject</button>
+</div>
+
+
+
+
+<div *ngIf="students" class="display-section">
+  <h2>Students</h2>
+  <ul>
+    <li *ngFor="let student of students">{{ student.firstName }} {{ student.lastName }}</li>
+  </ul>
+</div>
+
+<div *ngIf="subjects" class="display-section">
+  <h2>Subjects</h2>
+  <ul>
+    <li *ngFor="let subject of subjects">{{ subject }}</li>
+  </ul>
+</div>
+
+<div *ngIf="teacher" class="display-section">
+  <h2>Teacher</h2>
+  <ul>
+  <li>{{ teacher }}</li>
+  </ul>
+</div>
+
+<div *ngIf="grades" class="display-section">
+  <h2>Grades</h2>
+  <ul>
+    <li *ngFor="let grade of grades">{{ grade }}</li>
+  </ul>
+</div>
+
+<div *ngIf="averageGrade !== undefined" class="display-section">
+  <h2>Average Grade</h2>
+  <ul>
+    <li>{{ averageGrade }} </li>
+  </ul>
+</div>
+
+<router-outlet />
